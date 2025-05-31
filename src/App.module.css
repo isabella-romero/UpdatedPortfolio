@@ -1,0 +1,415 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap');
+
+/* PAGE HEIGHT AND LAYOUT SETUP */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #2F3E46;
+}
+
+body {
+  background-color: #2F3E46;
+  font-family: 'Lato', sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* App-level container that wraps everything */
+.container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Makes content area fill remaining space */
+.main {
+  flex: 1;
+  width: 100%;
+  padding: 2rem;
+  padding-bottom: 10rem;
+  box-sizing: border-box;
+}
+
+/* GENERAL STYLING */
+h1 {
+  font-size: 2.5rem;
+  padding: 0.5rem 0;
+  margin: 0;
+  color: #CAD2C5;
+}
+
+h2 {
+  color: #CAD2C5;
+}
+
+p {
+  color: #CAD2C5;
+}
+
+/* HEADER STYLING */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #2F3E46;
+}
+
+.headerContent {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+}
+
+.headerLine {
+  border: none;
+  height: 2px;
+  background: #CAD2C5;
+  width: 100vw;
+  margin: 0.5rem 0 0 0;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+/* NAVIGATION STYLING */
+nav ul {
+  list-style: none;
+  display: flex;
+  padding: 0;
+  gap: 1rem;
+  margin: 0;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+nav li {
+  position: relative;
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+nav ul li a {
+  position: relative;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  color: #CAD2C5;
+  font-size: 1.2rem;
+  text-decoration: none;
+  font-weight: 700;
+  border-radius: 8px;
+  overflow: hidden;
+  z-index: 1;
+  transition: all 0.3s ease;
+}
+
+nav ul li a::before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+  background: linear-gradient(45deg, #84A98C, #52796F, #354F52, #84A98C);
+  background-size: 400% 400%;
+  animation: borderGradient 5s ease infinite;
+  border-radius: 10px;
+  z-index: -1;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+nav ul li a:hover::before {
+  opacity: 1;
+}
+
+nav ul li a:hover {
+  transform: scale(1.05);
+  color: #ffffff;
+}
+
+@keyframes borderGradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* SCROLLABLE WORK SECTION */
+.work {
+  padding: 2rem 1rem 4rem;
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  margin-top: -2rem;
+  margin-bottom: -4rem;
+}
+
+.projects-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 1rem;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.projects-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.projects-container::-webkit-scrollbar-track {
+  background: #2F3E46;
+}
+
+.projects-container::-webkit-scrollbar-thumb {
+  background: #84A98C;
+  border-radius: 10px;
+}
+
+.projects-container::-webkit-scrollbar-thumb:hover {
+  background: #52796F;
+}
+
+.work a {
+  text-decoration: none;
+  color: #CAD2C5;
+  border: 1px solid #CAD2C5;
+  padding: 1rem;
+  border-radius: 8px;
+  background-color: #354F52;
+  width: 300px;
+  transition: transform 0.3s;
+}
+
+.work a:hover {
+  transform: scale(1.03);
+}
+
+.work a h3 {
+  font-size: 1.5rem;
+  margin: 0;
+}
+
+.work a p {
+  margin: 0.5rem 0;
+}
+
+.work a video {
+  width: 100%;
+  max-height: 200px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-top: 0.5rem;
+}
+
+/* FOOTER STYLING */
+.footer {
+  background-color: #354F52;
+  color: #CAD2C5;
+  text-align: center;
+  padding: 1rem;
+  width: 100%;
+  margin-top: auto;
+}
+
+.footerLinks {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.footerLinks a {
+  color: #84A98C;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.footerLinks a:hover {
+  color: #ffffff;
+}
+
+.active {
+  color: #ffffff;
+  background-color: #52796F;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Add this to your existing CSS */
+.resumeLink {
+  color: #84A98C;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.resumeLink:hover {
+  text-decoration: underline;
+  color: #52796F;
+}
+
+.aboutSection {
+  padding: 2rem;
+}
+
+.aboutContent {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 2rem;
+  justify-content: center;
+  margin-left: 4rem;
+}
+
+.selfPortrait {
+  width: 650px;
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.aboutText {
+  margin-top: -3rem;
+  margin-left: 4rem;
+  color: #CAD2C5;
+  flex: 1;
+  min-width: 280px;
+}
+
+@media (max-width: 768px) {
+  .aboutContent {
+    flex-direction: column;
+    margin-left: 0;
+    text-align: center;
+  }
+
+  .aboutText {
+    margin-left: 0;
+    margin-top: 0;
+    padding: 0 1rem;
+  }
+
+  .selfPortrait {
+    width: 80%;
+  }
+}
+
+.landing {
+  position: relative;
+  text-align: center;
+  padding: 2rem;
+  color: #CAD2C5;
+}
+
+.skillsSection {
+  margin-top: 3rem;
+  padding: 1rem;
+  background-color: #354F52;
+  border-radius: 12px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.skillsSection h2 {
+  margin-bottom: 1rem;
+  color: #84A98C;
+}
+
+.skillsList {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.skillsList li {
+  background-color: #2F3E46;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #84A98C;
+  color: #CAD2C5;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.skillsList li:hover {
+  background-color: #52796F;
+  color: #fff;
+}
+
+.contactIcons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.contactIcon {
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.contactIcon:hover {
+  transform: scale(1.1);
+}
+
+.imageGrid {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.documentImage {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.documentImage:hover {
+  transform: scale(1.05);
+}
+
+.resumeSection {
+  padding: 1rem;
+  text-align: center;
+}
+
+.centerText {
+  font-size: 1.2rem;
+  font-weight: 500;
+  margin: 0 0 1.5rem 0;
+  text-align: center;
+}
