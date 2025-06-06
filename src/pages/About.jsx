@@ -18,7 +18,7 @@ const About = () => {
 
 <h2>My Coding Journey</h2>
 <p>
-  My experience includes HTML/CSS, JavaScript, Web APIs, Node.js, TypeScript, SQL, and full-stack development with React and the MERN stack — plus implementing authentication and deploying applications. I've also collaborated on team projects and love building things from the ground up. Some of my favorite projects include full-stack apps and fun, interactive games.
+  My experience includes HTML/CSS, JavaScript, Web APIs, Node.js, TypeScript, SQL, and full-stack development with React and the MERN stack — plus implementing authentication and deploying applications. I've also collaborated on team projects and love building projects from the ground up. Some of my favorite projects include full-stack apps and fun, interactive games.
 </p>
         </div>
       </div>

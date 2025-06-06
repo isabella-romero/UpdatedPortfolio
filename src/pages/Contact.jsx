@@ -1,5 +1,6 @@
 import React from 'react';
-import styles from '../App.module.css'; // Make sure you adjust the path if needed
+// import styles from '../App.module.css'; // Make sure you adjust the path if needed
+import styles from '../Contact.module.css'; // Import specific styles for Contact page
 
 const Contact = () => {
   return (
@@ -16,7 +17,7 @@ const Contact = () => {
           rel="noopener noreferrer"
         >
           <img
-            src="/logos/github-logo.png"
+            src="/logos/github_PNG.png"
             alt="GitHub"
             className={styles.contactIcon}
           />
@@ -28,7 +29,7 @@ const Contact = () => {
           rel="noopener noreferrer"
         >
           <img
-            src="/logos/linkedin-logo.png"
+            src="/logos/linkedinlogo.png"
             alt="LinkedIn"
             className={styles.contactIcon}
           />

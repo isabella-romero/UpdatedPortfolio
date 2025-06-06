@@ -1,0 +1,29 @@
+.contact {
+  padding: 20px;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+.contactContainer {
+  max-width: 60px;
+  margin: 0 auto;
+}
+
+.contactIcons {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+  flex-wrap: wrap;
+}
+
+.contactIcon {
+  width: 80px;
+  height: 80px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.contactIcon:hover {
+  transform: scale(1.1);
+}

@@ -362,25 +362,6 @@ nav ul li a:hover {
   color: #fff;
 }
 
-.contactIcons {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
-  flex-wrap: wrap;
-}
-
-.contactIcon {
-  width: 60px;
-  height: 60px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
-}
-
-.contactIcon:hover {
-  transform: scale(1.1);
-}
-
 .imageGrid {
   display: flex;
   gap: 20px;
@@ -413,3 +394,4 @@ nav ul li a:hover {
   margin: 0 0 1.5rem 0;
   text-align: center;
 }
+
